@@ -19,7 +19,7 @@ date_default_timezone_set('Asia/Colombo');
 define('SMTP_HOST', 'smtp.gmail.com');           // Gmail SMTP server
 define('SMTP_PORT', 587);                         // TLS port
 define('SMTP_USERNAME', 'jasonrajaratnam@gmail.com'); // Your Gmail address
-define('SMTP_PASSWORD', 'ifkp dhbh hgid jmnd');   // App password (16 characters from Google) //ifkp dhbh hgid jmnd
+define('SMTP_PASSWORD', '');   // App password (16 characters from Google) //ifkp dhbh hgid jmnd
 define('SMTP_FROM_EMAIL', 'jasonrajaratnam@gmail.com'); // Same as SMTP_USERNAME
 define('SMTP_FROM_NAME', 'Expatro Tours');
 
