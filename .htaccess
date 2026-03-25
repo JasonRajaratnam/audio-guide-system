@@ -1,0 +1,30 @@
+# Protect audio files from direct access
+
+<FilesMatch "\.(mp3|wav|ogg|m4a|aac|flac)$">
+Order Deny,Allow
+Deny from all
+</FilesMatch>
+
+# Allow PHP scripts to run
+
+<FilesMatch "\.php$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>
+
+# Prevent directory listing
+
+Options -Indexes
+
+# Optional: Force HTTPS (uncomment when live)
+
+# RewriteEngine On
+
+# RewriteCond %{HTTPS} off
+
+# RewriteRule ^(.\*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Protect admin files
+
+<FilesMatch "(login|dashboard|manage-links|generate-link)\.php"> # Allow from specific IPs only (optional) # Order Deny,Allow # Deny from all # Allow from 192.168.1.100
+</FilesMatch>
